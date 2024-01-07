@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.div-container {
+    width: 100%;
+    height: 100vh;
+    background: #f2e9ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-box {
+    width: 150px;
+    height: 500px;
+    margin: 10px;
+    border-radius: 50px;
+    background-image: url(./imagens/img-anime-1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: width 0.5s;
+   
+}
+
+.img-box:nth-child(2) {
+    background-image: url(./imagens/img-anime-2.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-box:nth-child(3) {
+    background-image: url(./imagens/img-anime-3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-box:nth-child(4) {
+    background-image: url(./imagens/img-anime-4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-box h3 {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    right: 30px;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+}
+
+.img-box:hover {
+    width: 300px;
+    height: 650px;
+    cursor: pointer;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example {
+    0%  {border: 5px solid pink;}
+    25% {border: 5px solid purple;}
+    50% { border: 5px solid black;}
+    75% { border: 5px solid orange;}
+    100% {border: 5px solid red;}
+}
+
+.img-box:hover h3 {
+    opacity:1;
+    bottom: 25px;
+}
